@@ -43,20 +43,20 @@ st.markdown("""
 @st.cache_resource
 def load_models_and_data():
     """Load all necessary files"""
-    fabric_df = pd.read_csv('fabric_properties.csv')
-    event_df = pd.read_csv('event_properties.csv')
-    climate_df = pd.read_csv('climate_zones.csv')
-    city_df = pd.read_csv('city_mappings.csv')
-
-    with open('gradient_boosting_model.pkl', 'rb') as f:
+    fabric_df = pd.read_csv('data/fabric_properties.csv')
+    event_df = pd.read_csv('data/event_properties.csv')
+    climate_df = pd.read_csv('data/climate_zones.csv')
+    city_df = pd.read_csv('data/city_mappings.csv')
+    
+    with open('models/gradient_boosting_model.pkl', 'rb') as f:
         ml_model = pickle.load(f)
-
-    with open('label_encoders.pkl', 'rb') as f:
+    
+    with open('models/label_encoders.pkl', 'rb') as f:
         label_encoders = pickle.load(f)
-
-    with open('feature_info.json', 'r') as f:
+    
+    with open('models/feature_info.json', 'r') as f:
         feature_info = json.load(f)
-
+    
     return fabric_df, event_df, climate_df, city_df, ml_model, label_encoders, feature_info
 
 # Load everything
