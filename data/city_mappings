@@ -1,0 +1,39 @@
+city,climate_zone
+"Yellowknife, Canada",Arctic_Cold
+"Reykjavik, Iceland",Arctic_Cold
+"Nuuk, Greenland",Arctic_Cold
+"Edmonton, Canada",Subarctic_Cold
+"Moscow, Russia",Subarctic_Cold
+"Ulaanbaatar, Mongolia",Subarctic_Cold
+"Harstad, Norway",Subarctic_Cold
+"Kiruna, Sweden",Subarctic_Cold
+"Toronto, Canada",Continental_Temperate
+"Chicago, USA",Continental_Temperate
+"Beijing, China",Continental_Temperate
+"Warsaw, Poland",Continental_Temperate
+"Kiev, Ukraine",Continental_Temperate
+"London, UK",Oceanic_Temperate
+"Vancouver, Canada",Oceanic_Temperate
+"Wellington, New Zealand",Oceanic_Temperate
+"Auckland, New Zealand",Oceanic_Temperate
+"Port Elizabeth, South Africa",Oceanic_Temperate
+"Rome, Italy",Mediterranean
+"Barcelona, Spain",Mediterranean
+"Cape Town, South Africa",Mediterranean
+"Athens, Greece",Mediterranean
+"Los Angeles, USA",Mediterranean
+"Miami, USA",Subtropical_Humid
+"Shanghai, China",Subtropical_Humid
+"Brisbane, Australia",Subtropical_Humid
+"Hong Kong, China",Subtropical_Humid
+"Harare, Zimbabwe",Subtropical_Humid
+"Singapore, Singapore",Tropical
+"Lagos, Nigeria",Tropical
+"Manaus, Brazil",Tropical
+"Nairobi, Kenya",Tropical
+"Jakarta, Indonesia",Tropical
+"Dubai, UAE",Desert_Hot
+"Phoenix, USA",Desert_Hot
+"Cairo, Egypt",Desert_Hot
+"Lima, Peru",Desert_Hot
+"Baghdad, Iraq",Desert_Hot
