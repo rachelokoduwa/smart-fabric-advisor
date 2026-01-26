@@ -1,0 +1,9 @@
+zone_name,description,hemisphere,winter_temp_min,winter_temp_max,winter_humidity,winter_precipitation,summer_temp_min,summer_temp_max,summer_humidity,summer_precipitation,seasonal_variation,typical_continents,representative_cities
+Arctic_Cold,"Extreme cold climate, minimal seasonal variation",Northern,-40,-20,Low,Low,5,15,Medium,Medium,Moderate,"['North America', 'Europe']","['Yellowknife', 'Reykjavik', 'Nuuk']"
+Subarctic_Cold,"Very cold winters, short mild summers",Northern,-30,-10,Low,Low,12,25,Medium,Medium,Extreme,"['North America', 'Europe', 'Asia']","['Edmonton', 'Moscow', 'Ulaanbaatar']"
+Continental_Temperate,"Four distinct seasons, cold winters, warm summers, moderate precipitation",Northern,-10,0,Medium,Medium,20,30,Medium,Medium,High,"['North America', 'Europe', 'Asia']","['Toronto', 'Chicago', 'Beijing']"
+Oceanic_Temperate,"Mild winters, cool summers, cloudy, high precipitation",Both,0,10,Medium,High,15,25,Medium,High,Low,"['Europe', 'North America', 'Oceania']","['London', 'Vancouver', 'Wellington']"
+Mediterranean,"Hot dry summers, mild wet winters",Both,5,15,Medium,Medium,25,35,Low,Low,Moderate,"['Europe', 'Africa', 'Australia']","['Rome', 'Barcelona', 'Cape Town']"
+Subtropical_Humid,"Hot humid summers, mild winters",Both,10,20,High,Medium,25,35,High,Medium,Moderate,"['North America', 'Asia', 'Australia', 'Africa']","['Miami', 'Shanghai', 'Brisbane']"
+Tropical,"Warm year-round, minimal seasonal variation, high humidity & precipitation",Both,25,28,High,High,28,32,High,High,None,"['South America', 'Africa', 'Asia']","['Singapore', 'Lagos', 'Manaus']"
+Desert_Hot,"Very dry, hot summers, mild winters, low humidity",Both,15,25,Low,None,35,45,Low,None,High,"['North America', 'Africa', 'Middle East', 'Australia']","['Dubai', 'Phoenix', 'Cairo']"

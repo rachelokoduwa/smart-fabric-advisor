@@ -1,0 +1,14 @@
+fabric_name,category,breathability,warmth,formality,water_resistance
+Cotton,Natural,8,4,6,2
+Wool,Natural,4,9,7,6
+Cashmere,Natural,5,10,8,5
+Silk,Natural,8,5,8,2
+Linen,Natural,10,2,6,1
+Polyester,Synthetic,3,6,6,8
+Nylon,Synthetic,2,5,5,9
+Denim,Natural,5,6,3,3
+Leather,Natural,1,8,5,9
+Fleece,Synthetic,3,9,3,7
+Rayon,Synthetic,8,4,6,2
+Spandex,Synthetic,2,3,2,6
+Velvet,Natural,4,7,10,4

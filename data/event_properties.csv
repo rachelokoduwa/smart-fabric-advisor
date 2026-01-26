@@ -1,0 +1,13 @@
+event_name,formality_level,duration_hours,activity_level,setting,weather_exposure
+Wedding,9,5,4,both,5
+Job Interview,8,1,2,indoor,2
+Birthday Party,3,3,6,both,5
+Business Meeting,6,5,2,indoor,2
+Casual Hangout,1,6,5,outdoor,9
+Formal Dinner,9,7,2,indoor,4
+Outdoor Concert,1,8,7,outdoor,9
+Hiking,2,3,10,outdoor,10
+Sports/Gym,1,1,8,both,5
+Beach Outing,1,4,6,outdoor,10
+Funeral,8,5,2,both,8
+Date Night,7,3,5,both,7
