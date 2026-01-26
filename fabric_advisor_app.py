@@ -6,6 +6,7 @@ import pickle
 import json
 import matplotlib.pyplot as plt
 import seaborn as sns
+import joblib  # Added this line
 
 # Page configuration
 st.set_page_config(
@@ -48,13 +49,11 @@ def load_models_and_data():
     climate_df = pd.read_csv('data/climate_zones.csv')
     city_df = pd.read_csv('data/city_mappings.csv')
     
-    with open('model/gradient_boosting_model.pkl', 'rb') as f:
-        ml_model = pickle.load(f)
+    # Use joblib with _JOBLIB filenames
+    ml_model = joblib.load('model/gradient_boosting_model_JOBLIB.pkl')
+    label_encoders = joblib.load('model/label_encoders_JOBLIB.pkl')
     
-    with open('model/label_encoders.pkl', 'rb') as f:
-        label_encoders = pickle.load(f)
-    
-    with open('model/feature_info.json', 'r') as f:
+    with open('model/feature_info_JOBLIB.json', 'r') as f:
         feature_info = json.load(f)
     
     return fabric_df, event_df, climate_df, city_df, ml_model, label_encoders, feature_info
