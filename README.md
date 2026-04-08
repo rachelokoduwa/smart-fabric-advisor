@@ -180,7 +180,7 @@ MIT License - see LICENSE file for details.
 
 ## 👤 Author
 
-**Your Name**
+**Rachel Okoduwa**
 - GitHub: [@rachelokoduwa](https://github.com/rachelokoduwa)
 - LinkedIn: [Rachel Okoduwa](https://linkedin.com/in/rachelokoduwa)
 
