@@ -8,7 +8,7 @@
 
 This project started with a simple question: can a machine learning model tell you what fabric to wear based on where you are, what season it is, and what you are doing?
 
-Built over 7 days in January 2025, Smart Fabric Advisor recommends the most suitable fabric for any occasion based on location, weather, season, and event type. It is powered by a Gradient Boosting ML model with 99.81% R² accuracy.
+Built over 7 days in January 2026, Smart Fabric Advisor recommends the most suitable fabric for any occasion based on location, weather, season, and event type. It is powered by a Gradient Boosting ML model with 99.81% R² accuracy.
 
 ---
 
@@ -87,7 +87,9 @@ streamlit run fabric_advisor_app.py
 
 ## Project Structure
 smart-fabric-advisor/
-├── fabric_advisor_app.py       # Main Streamlit application
+├──fabric_advisor_app.py 
+
+# Main Streamlit application
 ├── requirements.txt
 ├── data/
 │   ├── fabric_properties.csv
