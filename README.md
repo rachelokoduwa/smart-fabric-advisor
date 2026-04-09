@@ -1,84 +1,45 @@
-# 👔 Smart Fabric Advisor
+# Smart Fabric Advisor
 
 **AI-Powered Fabric Recommendation System using Machine Learning**
 
-[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.28-FF4B4B.svg)](https://streamlit.io)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+---
+
+## Overview
+
+This project started with a simple question: can a machine learning model tell you what fabric to wear based on where you are, what season it is, and what you are doing?
+
+Built over 7 days in January 2025, Smart Fabric Advisor recommends the most suitable fabric for any occasion based on location, weather, season, and event type. It is powered by a Gradient Boosting ML model with 99.81% R² accuracy.
 
 ---
 
-## 🎯 Overview
+## Live Demo
 
-Smart Fabric Advisor helps users choose the perfect fabric for any occasion based on:
-- 📍 **Location** (38 cities worldwide)
-- 🌡️ **Weather** (temperature, humidity, precipitation)
-- 📅 **Season** (Summer/Winter)
-- 🎉 **Event Type** (12 different events)
-
-Powered by a **Gradient Boosting ML model** with **99.81% R² accuracy**.
+https://smart-fabric-advisor-nkvgpduotpdvegvyfqop8a.streamlit.app/
 
 ---
 
-## ✨ Features
+## How It Works
 
-- 🤖 **ML-Powered**: Gradient Boosting model trained on 2,496 scenarios
-- 🌍 **Global Coverage**: 38 cities across all continents
-- 🎨 **Interactive UI**: Built with Streamlit
-- 📊 **Visual Analytics**: Charts showing fabric properties
-- ⚡ **Real-Time**: Instant predictions (< 1 second)
-- 📱 **Responsive**: Works on desktop, tablet, mobile
+The recommendation score (0-100) is a weighted combination of four factors:
 
----
-
-## 🚀 Quick Start
-
-### Run Locally
-
-1. **Clone the repository:**
-```bash
-git clone https://github.com/YOUR_USERNAME/smart-fabric-advisor.git
-cd smart-fabric-advisor
-```
-
-2. **Install dependencies:**
-```bash
-pip install -r requirements.txt
-```
-
-3. **Run the app:**
-```bash
-streamlit run fabric_advisor_app.py
-```
-
-4. **Open browser:**
-Navigate to `http://localhost:8501`
+- **Temperature comfort (50%)** — how well the fabric handles the climate
+- **Activity suitability (20%)** — how practical the fabric is for the event
+- **Formality match (20%)** — how well the fabric matches the event dress code
+- **Weather protection (10%)** — how well the fabric handles humidity and rain
 
 ---
 
-## 📁 Project Structure
-```
-smart-fabric-advisor/
-├── fabric_advisor_app.py       # Main Streamlit application
-├── requirements.txt             # Python dependencies
-├── README.md                    # This file
-├── LICENSE                      # MIT License
-├── data/                       # Dataset files
-│   ├── fabric_properties.csv
-│   ├── event_properties.csv
-│   ├── climate_zones.csv
-│   ├── city_mappings.csv
-│   └── main_training_dataset.csv
-├── models/                     # Trained ML models
-│   ├── gradient_boosting_model.pkl
-│   ├── label_encoders.pkl
-│   └── feature_info.json
-└── images/                     # Visualizations
-```
+## Features
+
+- 38 cities worldwide
+- 12 event types
+- 13 fabric types
+- Real-time ML predictions in under 1 second
+- Interactive charts and property breakdowns
 
 ---
 
-## 📊 Model Performance
+## Model Performance
 
 | Model | Test MAE | Test R² | Training Time |
 |-------|----------|---------|---------------|
@@ -86,114 +47,69 @@ smart-fabric-advisor/
 | Random Forest | 1.10 | 0.99 | ~30 sec |
 | **Gradient Boosting** | **0.46** | **0.998** | ~2 min |
 
-**Champion Model: Gradient Boosting**
-- Predictions accurate within 0.46 points on average
-- Explains 99.81% of variance in fabric suitability
-- Excellent generalization (minimal overfitting)
+The Gradient Boosting model was selected as the final model. It predicts fabric suitability within 0.46 points on average and explains 99.81% of variance in the data with minimal overfitting.
 
 ---
 
-## 💻 Usage
+## Dataset
 
-### Using the Web App
+The training dataset was built from scratch using domain knowledge across five dimensions:
 
-1. **Select City**: Choose from 38 worldwide locations
-2. **Choose Season**: Summer or Winter
-3. **Pick Event**: Wedding, Business Meeting, Hiking, etc.
-4. **Get Recommendations**: Click button for instant results
-5. **View Results**: See ranked fabrics with scores and properties
-
-### Example Results
-
-**Winter Wedding in Yellowknife, Canada (-40°C):**
-- Top Recommendation: **Cashmere** (Score: 89.5)
-- Why: Maximum warmth (10/10) + High formality (8/10)
-
-**Summer Beach in Dubai, UAE (40°C):**
-- Top Recommendation: **Linen** (Score: 78.9)
-- Why: Maximum breathability (10/10) + Low warmth (2/10)
+- **Fabrics**: 13 types with properties including breathability, warmth, formality, and water resistance
+- **Events**: 12 types with formality levels, activity requirements, and weather exposure
+- **Cities**: 38 worldwide locations mapped to 7 climate zones
+- **Seasons**: Summer and Winter conditions for each climate zone
+- **Training scenarios**: 2,496 unique combinations
 
 ---
 
-## 📚 Dataset
+## Quick Start
 
-### Coverage
-- **Fabrics**: 13 types (Cotton, Wool, Silk, Linen, Polyester, etc.)
-- **Events**: 12 types (Wedding, Business Meeting, Hiking, etc.)
-- **Cities**: 38 worldwide locations
-- **Climate Zones**: 7 zones (Arctic, Tropical, Desert, etc.)
-- **Training Data**: 2,496 unique scenarios
-
-### Features (19 total)
-- **Categorical (8)**: fabric_name, fabric_category, event_name, climate_zone, season, setting, humidity, precipitation
-- **Numerical (11)**: breathability, warmth, formality, water_resistance, event_formality_level, duration_hours, activity_level, weather_exposure, temp_min, temp_max, temp_avg
-
-### Target Variable
-- **suitability_score**: 0-100 (fabric's suitability for scenario)
+```bash
+git clone https://github.com/rachelokoduwa/smart-fabric-advisor.git
+cd smart-fabric-advisor
+pip install -r requirements.txt
+streamlit run fabric_advisor_app.py
+```
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **Language**: Python 3.11
-- **ML Framework**: scikit-learn (Gradient Boosting)
-- **Web Framework**: Streamlit
-- **Data Processing**: pandas, numpy
-- **Visualization**: matplotlib, seaborn
-- **Deployment**: Streamlit Cloud
-
----
-
-## 🔬 Methodology
-
-1. **Data Creation**: Synthetic dataset based on domain knowledge
-2. **Feature Engineering**: Temperature calculations, climate mappings
-3. **Model Training**: Compared 3 models, selected Gradient Boosting
-4. **Evaluation**: MAE, R², overfitting analysis
-5. **Deployment**: Streamlit web application
+- Python 3.11
+- scikit-learn (Gradient Boosting, Label Encoding)
+- Streamlit
+- pandas, numpy
+- matplotlib, seaborn
+- joblib
 
 ---
 
-## 🔮 Future Improvements
-
-- [ ] Add 100+ cities worldwide
-- [ ] Include 20+ fabric types
-- [ ] Weather API integration for real-time data
-- [ ] User feedback system
-- [ ] Outfit recommendations (multiple items)
-- [ ] Mobile app version
-- [ ] Multi-language support
-
----
-
-## 🤝 Contributing
-
-Contributions welcome! Please feel free to submit a Pull Request.
-
----
-
-## 📄 License
-
-MIT License - see LICENSE file for details.
+## Project Structure
+smart-fabric-advisor/
+├── fabric_advisor_app.py       # Main Streamlit application
+├── requirements.txt
+├── data/
+│   ├── fabric_properties.csv
+│   ├── event_properties.csv
+│   ├── climate_zones.csv
+│   ├── city_mappings.csv
+│   └── main_training_dataset.csv
+├── model/
+│   ├── gradient_boosting_model_JOBLIB.pkl
+│   ├── label_encoders_JOBLIB.pkl
+│   └── feature_info_JOBLIB.json
+└── images/
 
 ---
 
-## 👤 Author
+## Author
 
 **Rachel Okoduwa**
-- GitHub: [@rachelokoduwa](https://github.com/rachelokoduwa)
-- LinkedIn: [Rachel Okoduwa](https://linkedin.com/in/rachelokoduwa)
+- GitHub: [rachelokoduwa](https://github.com/rachelokoduwa)
+- LinkedIn: [Rachel Okoduwa](https://linkedin.com/in/rachel-okoduwa)
+- Portfolio: [rachelokoduwa.github.io](https://rachelokoduwa.github.io)
 
 ---
 
-## 🙏 Acknowledgments
-
-- Climate data based on Köppen climate classification
-- Fabric properties from textile industry standards
-- Event formality levels from dress code conventions
-
----
-
-**⭐ If you found this project helpful, please give it a star!**
-
-Built with ❤️ using Python, scikit-learn, and Streamlit
+*Built with curiosity and a lot of help from Claude AI.*
