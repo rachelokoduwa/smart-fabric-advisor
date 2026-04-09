@@ -5,5 +5,5 @@ Continental_Temperate,"Four distinct seasons, cold winters, warm summers, modera
 Oceanic_Temperate,"Mild winters, cool summers, cloudy, high precipitation",Both,0,10,Medium,High,15,25,Medium,High,Low,"['Europe', 'North America', 'Oceania']","['London', 'Vancouver', 'Wellington']"
 Mediterranean,"Hot dry summers, mild wet winters",Both,5,15,Medium,Medium,25,35,Low,Low,Moderate,"['Europe', 'Africa', 'Australia']","['Rome', 'Barcelona', 'Cape Town']"
 Subtropical_Humid,"Hot humid summers, mild winters",Both,10,20,High,Medium,25,35,High,Medium,Moderate,"['North America', 'Asia', 'Australia', 'Africa']","['Miami', 'Shanghai', 'Brisbane']"
-Tropical,"Warm year-round, minimal seasonal variation, high humidity & precipitation",Both,25,28,High,High,28,32,High,High,None,"['South America', 'Africa', 'Asia']","['Singapore', 'Lagos', 'Manaus']"
-Desert_Hot,"Very dry, hot summers, mild winters, low humidity",Both,15,25,Low,None,35,45,Low,None,High,"['North America', 'Africa', 'Middle East', 'Australia']","['Dubai', 'Phoenix', 'Cairo']"
+Tropical,"Warm year-round, minimal seasonal variation, high humidity & precipitation",Both,25,28,High,High,28,32,High,High,,"['South America', 'Africa', 'Asia']","['Singapore', 'Lagos', 'Manaus']"
+Desert_Hot,"Very dry, hot summers, mild winters, low humidity",Both,15,25,Low,Low,35,45,Low,Low,High,"['North America', 'Africa', 'Middle East', 'Australia']","['Dubai', 'Phoenix', 'Cairo']"
